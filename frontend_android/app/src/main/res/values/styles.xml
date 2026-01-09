@@ -1,0 +1,35 @@
+<resources>
+    <style name="AppTheme" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/ocean_background</item>
+        <item name="android:textColorPrimary">@color/ocean_text</item>
+        <item name="android:colorAccent">@color/ocean_primary</item>
+    </style>
+
+    <!-- Round, modern tile button -->
+    <style name="TicTacToeCell" parent="@android:style/Widget.Material.Button">
+        <item name="android:layout_width">84dp</item>
+        <item name="android:layout_height">84dp</item>
+        <item name="android:background">@drawable/bg_cell</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/ocean_text</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:stateListAnimator">@android:animator/fade_in</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="TicTacToePrimaryButton" parent="@android:style/Widget.Material.Button">
+        <item name="android:background">@drawable/bg_primary_button</item>
+        <item name="android:textColor">@color/ocean_surface</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <style name="TicTacToeSecondaryButton" parent="@android:style/Widget.Material.Button">
+        <item name="android:background">@drawable/bg_secondary_button</item>
+        <item name="android:textColor">@color/ocean_text</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+</resources>

@@ -1,0 +1,227 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ocean_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingTop="28dp"
+    android:paddingBottom="24dp"
+    tools:context=".MainActivity">
+
+    <!-- Status -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:letterSpacing="0.01"
+        android:text="X's turn"
+        android:textColor="@color/ocean_text"
+        android:textSize="22sp" />
+
+    <!-- Board container -->
+    <LinearLayout
+        android:id="@+id/boardCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_board_card"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Row 1 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cell0"
+                style="@style/TicTacToeCell"
+                android:layout_marginEnd="10dp" />
+
+            <Button
+                android:id="@+id/cell1"
+                style="@style/TicTacToeCell"
+                android:layout_marginEnd="10dp" />
+
+            <Button
+                android:id="@+id/cell2"
+                style="@style/TicTacToeCell" />
+        </LinearLayout>
+
+        <!-- Row 2 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cell3"
+                style="@style/TicTacToeCell"
+                android:layout_marginEnd="10dp" />
+
+            <Button
+                android:id="@+id/cell4"
+                style="@style/TicTacToeCell"
+                android:layout_marginEnd="10dp" />
+
+            <Button
+                android:id="@+id/cell5"
+                style="@style/TicTacToeCell" />
+        </LinearLayout>
+
+        <!-- Row 3 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cell6"
+                style="@style/TicTacToeCell"
+                android:layout_marginEnd="10dp" />
+
+            <Button
+                android:id="@+id/cell7"
+                style="@style/TicTacToeCell"
+                android:layout_marginEnd="10dp" />
+
+            <Button
+                android:id="@+id/cell8"
+                style="@style/TicTacToeCell" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Scores -->
+    <LinearLayout
+        android:id="@+id/scoresRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_score_chip"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="X"
+                android:textColor="@color/ocean_primary"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/scoreXText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="0"
+                android:textColor="@color/ocean_text"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="1dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_score_chip"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="O"
+                android:textColor="@color/ocean_amber"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/scoreOText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="0"
+                android:textColor="@color/ocean_text"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="1dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_score_chip"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Draws"
+                android:textColor="@color/ocean_muted"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/scoreDrawText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="0"
+                android:textColor="@color/ocean_text"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Controls -->
+    <LinearLayout
+        android:id="@+id/controlsRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/restartButton"
+            style="@style/TicTacToePrimaryButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Restart" />
+
+        <View
+            android:layout_width="12dp"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/resetScoresButton"
+            style="@style/TicTacToeSecondaryButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Reset scores" />
+    </LinearLayout>
+
+</LinearLayout>

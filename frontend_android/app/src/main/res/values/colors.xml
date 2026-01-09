@@ -1,0 +1,16 @@
+<resources>
+    <!-- Ocean Professional theme -->
+    <color name="ocean_primary">#2563EB</color>
+    <color name="ocean_amber">#F59E0B</color>
+    <color name="ocean_error">#EF4444</color>
+
+    <color name="ocean_background">#F9FAFB</color>
+    <color name="ocean_surface">#FFFFFF</color>
+    <color name="ocean_text">#111827</color>
+    <color name="ocean_muted">#6B7280</color>
+
+    <!-- Board / lines -->
+    <color name="ocean_border">#E5E7EB</color>
+    <color name="ocean_primary_soft">#1A2563EB</color> <!-- ~10% alpha -->
+    <color name="ocean_amber_soft">#1AF59E0B</color>   <!-- ~10% alpha -->
+</resources>
