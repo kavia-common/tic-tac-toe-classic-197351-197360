@@ -27,8 +27,9 @@ defaults {
 
         testing {
             dependencies {
-                implementation("org.junit.jupiter:junit-jupiter:5.10.2")
-                runtimeOnly("org.junit.platform:junit-platform-launcher")
+                // Use JUnit 4 for Android unit tests in this project; it is the most compatible with the
+                // current Gradle experimental android-ecosystem plugin test runner.
+                implementation("junit:junit:4.13.2")
             }
         }
     }
@@ -40,8 +41,8 @@ defaults {
 
         testing {
             dependencies {
-                implementation("org.junit.jupiter:junit-jupiter:5.10.2")
-                runtimeOnly("org.junit.platform:junit-platform-launcher")
+                // Keep libraries consistent with the app test framework (JUnit 4).
+                implementation("junit:junit:4.13.2")
             }
         }
     }
