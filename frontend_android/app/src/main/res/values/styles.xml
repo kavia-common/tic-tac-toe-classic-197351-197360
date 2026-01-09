@@ -3,6 +3,13 @@
         <item name="android:windowBackground">@color/ocean_background</item>
         <item name="android:textColorPrimary">@color/ocean_text</item>
         <item name="android:colorAccent">@color/ocean_primary</item>
+
+        <!--
+          Note:
+          We intentionally do NOT set android:allCaps / android:textAllCaps here.
+          Some Android builds/configurations (or framework themes) do not expose android:attr/allCaps,
+          which causes AAPT2 resource linking failures.
+        -->
     </style>
 
     <!-- Round, modern tile button -->
@@ -23,6 +30,8 @@
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textSize">14sp</item>
         <item name="android:minHeight">48dp</item>
+
+        <!-- Avoid all-caps attribute to prevent AAPT2 resource linking errors -->
     </style>
 
     <style name="TicTacToeSecondaryButton" parent="@android:style/Widget.Material.Button">
@@ -31,5 +40,7 @@
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textSize">14sp</item>
         <item name="android:minHeight">48dp</item>
+
+        <!-- Avoid all-caps attribute to prevent AAPT2 resource linking errors -->
     </style>
 </resources>
